@@ -85,3 +85,89 @@ if favoriteGames.isEmpty {
 } else {
     print("There are games")
 }
+
+favoriteGames.insert("Metal Gear")
+
+if let removeGame = favoriteGames.remove("FarCry") {
+    print("Lo ha eliminado \(removeGame)")
+}
+
+if favoriteGames.contains("Metal Gear") {
+    print("Me encanta el juego")
+}
+
+for game in favoriteGames.sorted() {
+    print(game)
+}
+
+// operaciones con conjuntos
+
+let oddNumbers: Set = [1, 3, 5, 7, 9]
+let evenNumbers: Set = [0, 2, 4, 6, 8]
+let primeNumbers: Set = [2, 3, 5, 7]
+
+// A union B = elementos que son de a o b o de los dos
+oddNumbers.union(evenNumbers).sorted()
+
+// A intersection B = elementos que son a la vez de A y B
+oddNumbers.intersection(evenNumbers)
+evenNumbers.intersection(primeNumbers)
+oddNumbers.intersection(primeNumbers)
+
+// A - B = elementos que son de a pero no de b
+oddNumbers.subtracting(primeNumbers)
+
+// A = B = {A-B} union {B-A}
+oddNumbers.symmetricDifference(primeNumbers).sorted()
+
+let houseAnimals: Set = ["🐈", "🐶"]
+let farmAnimals: Set = ["🐔", "🐮", "🐷", "🐴", "🐶", "🐈"]
+let cityAnimals: Set = ["🐀", "🦅"]
+
+houseAnimals.isSubset(of: farmAnimals)
+farmAnimals.isSuperset(of: houseAnimals)
+// A y B son disjuntos si su interseccion es vacia
+farmAnimals.isDisjoint(with: cityAnimals)
+
+
+
+
+// DICCIONARIOS - los objetos estarn guardados como clave valor
+
+var namesOfIntegers = [Int: String]()
+namesOfIntegers[15] = "quince"
+namesOfIntegers = [:]
+
+var airports: [String: String] = ["YYZ": "Toronto", "DUB": "Dublin", "PMI": "palma de mallorca"]
+
+airports.count
+airports.isEmpty
+airports["LHR"] = "London City Airport"
+airports["LHR"] = "London Hearthrow"
+airports
+
+if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+    print("el viejo nombre era \(oldValue)")
+}
+
+airports["PMI"] = nil
+airports
+
+let removedAirport = airports.removeValue(forKey: "LHR")
+
+// iteracion de diccionarios
+
+for (key, value) in airports {
+    print("\(key): \(value)")
+}
+
+for key in airports.keys {
+    print(key)
+}
+
+for name in airports.values {
+    print(name)
+}
+
+let airposrtKeys = [String](airports.keys)
+let airportsNames = [String](airports.values)
