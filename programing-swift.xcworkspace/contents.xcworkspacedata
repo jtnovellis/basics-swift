@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:clousures.playground">
+   </FileRef>
+   <FileRef
+      location = "group:functions.playground">
+   </FileRef>
+   <FileRef
       location = "group:04_control_flow.playground">
    </FileRef>
    <FileRef
