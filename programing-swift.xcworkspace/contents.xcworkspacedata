@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:03_collections.playground">
+   </FileRef>
+   <FileRef
+      location = "group:02_strings.playground">
+   </FileRef>
+   <FileRef
+      location = "group:01_operators.playground">
+   </FileRef>
+</Workspace>
