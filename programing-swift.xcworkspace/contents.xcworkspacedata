@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:enums.playground">
+   </FileRef>
+   <FileRef
       location = "group:clousures.playground">
    </FileRef>
    <FileRef
