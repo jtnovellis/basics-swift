@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:struct_class.playground">
+   </FileRef>
+   <FileRef
       location = "group:enums.playground">
    </FileRef>
    <FileRef
