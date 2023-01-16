@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:inits.playground">
+   </FileRef>
+   <FileRef
       location = "group:inheritance.playground">
    </FileRef>
    <FileRef
