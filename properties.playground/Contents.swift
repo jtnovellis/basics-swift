@@ -93,3 +93,60 @@ struct Saludo {
 
 let primerSaludo = Saludo(name: "Jairo", gender: "male", languaje: "espanol")
 primerSaludo.saludar
+
+
+// property obsesrver
+
+// willSet // didSet
+
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps){
+            print("El numero de pasos va a subir hasta \(newTotalSteps)")
+        }
+        didSet {
+            if totalSteps > oldValue {
+                print("el numero de pasos ha incrementado en \(totalSteps - oldValue)")
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 202
+stepCounter.totalSteps = 300
+
+
+struct NewStruct {
+    var counter = 0
+    static var storedTypeProperty = "some value"
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+
+var intanceStr = NewStruct()
+var instanceStr2 = NewStruct()
+
+NewStruct.computedTypeProperty
+
+enum NewEnum {
+    static var stored = "som value"
+    static var computed: Int {
+        return 5
+    }
+}
+
+NewEnum.computed
+
+class NewClass {
+    static var stored = "some value"
+    static var computed: Int {
+        return 9
+    }
+    class var overridableComputedTypeProperty: Int {
+        return 100
+    }
+}
+
+
