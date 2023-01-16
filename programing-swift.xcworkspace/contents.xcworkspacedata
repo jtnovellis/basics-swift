@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:optional_chaining.playground">
+   </FileRef>
+   <FileRef
       location = "group:inits.playground">
    </FileRef>
    <FileRef
